@@ -8,6 +8,7 @@ class IndustryIdentifiers {
     type = json['type'];
     identifier = json['identifier'];
   }
+
   String? type;
   String? identifier;
 
