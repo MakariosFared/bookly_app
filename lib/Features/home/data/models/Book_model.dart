@@ -25,7 +25,7 @@ class BookModel extends Equatable {
         ? VolumeInfo.fromJson(json['volumeInfo'])
         : null;
     saleInfo =
-        json['saleInfo'] != null ? SaleInfo.fromJson(json['saleInfo']) : null;
+    json['saleInfo'] != null ? SaleInfo.fromJson(json['saleInfo']) : null;
     accessInfo = json['accessInfo'] != null
         ? AccessInfo.fromJson(json['accessInfo'])
         : null;
