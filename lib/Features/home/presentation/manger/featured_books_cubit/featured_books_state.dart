@@ -1,4 +1,6 @@
-part of 'featured_books_cubit.dart';
+import 'package:bookly_app/Features/home/data/models/Book_model.dart';
+import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 
 @immutable
 abstract class FeaturedBooksState extends Equatable {
