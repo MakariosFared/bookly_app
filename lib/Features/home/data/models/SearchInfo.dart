@@ -1,19 +1,18 @@
-/// textSnippet : "Discover How to Program Effectively in Less Than 5 Days, Even if You Have Never Written Code Before."
-library;
+import 'package:equatable/equatable.dart';
 
-class SearchInfo {
-  SearchInfo({
-    this.textSnippet,
-  });
+class SearchInfo extends Equatable {
+  final String? textSnippet;
 
-  SearchInfo.fromJson(dynamic json) {
-    textSnippet = json['textSnippet'];
-  }
-  String? textSnippet;
+  const SearchInfo({this.textSnippet});
 
-  Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    map['textSnippet'] = textSnippet;
-    return map;
-  }
+  factory SearchInfo.fromJson(Map<String, dynamic> json) => SearchInfo(
+        textSnippet: json['textSnippet'] as String?,
+      );
+
+  Map<String, dynamic> toJson() => {
+        'textSnippet': textSnippet,
+      };
+
+  @override
+  List<Object?> get props => [textSnippet];
 }

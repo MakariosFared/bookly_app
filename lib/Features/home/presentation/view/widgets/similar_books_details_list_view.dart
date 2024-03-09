@@ -14,7 +14,10 @@ class SimilarBooksDetailsListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 5),
-            child: CustomBookImage(),
+            child: CustomBookImage(
+              imageUrl:
+                  'https://photographylife.com/wp-content/uploads/2020/01/iPhone-11-Pro-Image-Sample-71.jpg',
+            ),
           );
         },
       ),
