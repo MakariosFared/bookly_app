@@ -16,14 +16,16 @@ class SimilarBooksDetailsListView extends StatelessWidget {
           return SizedBox(
             height: MediaQuery.of(context).size.height * 0.15,
             child: ListView.builder(
+              itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.zero,
               itemBuilder: (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5),
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
                   child: CustomBookImage(
                     imageUrl:
-                        'https://photographylife.com/wp-content/uploads/2020/01/iPhone-11-Pro-Image-Sample-71.jpg',
+                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
+                            '',
                   ),
                 );
               },
